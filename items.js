@@ -44,7 +44,7 @@ const addItem = () => {
   const productQuantity = readline.question("Quantity: ");
 // Create a new item from user's input data
 const newItem = {
-    id: 6,
+    id: newId(),
     name: productName,
     quantity: productQuantity,
 }
@@ -52,8 +52,19 @@ const newItem = {
 items.push(newItem);
 
 }
-
-
+//create a function that creates a new id for an item
+const newId = () => {
+  //find the biggest id
+  let biggestNumber = 0;
+  for (let item of items) {
+    if (item.id > biggestNumber) {
+      biggestNumber = item.id
+    }
+  }
+  // add 1 to it
+  return biggestNumber + 1
+// return the new number out of the function  
+}
 // edit an item's details
 
 // display low inventory items
