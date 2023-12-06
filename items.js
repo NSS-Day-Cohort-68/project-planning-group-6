@@ -43,8 +43,16 @@ const addItem = () => {
   // Collect user input for the quantity
   const productQuantity = readline.question("Quantity: ");
 // Create a new item from user's input data
-// Add item to inventory list
+const newItem = {
+    id: 6,
+    name: productName,
+    quantity: productQuantity,
 }
+// Add item to inventory list
+items.push(newItem);
+
+}
+
 
 // edit an item's details
 
