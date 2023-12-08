@@ -66,6 +66,24 @@ const newId = () => {
 // return the new number out of the function  
 }
 // edit an item's details
+const editItem = () => {
+  // display current inventory to the user
+  displayItems()
+  // collect input from the user about which item we want to edit
+  const itemId = readline.question("what is the id of the item you want to edit: ");
+  // what new name they want to give the user and what new quantity they want to use
+  const productName = readline.question("Name: ");
+  const productQuantity = readline.question("Quantity: ");
+  // find the item in the array
+  let foundItem;
+  for(let item of items) {
+if (item.id === parseInt(itemId)) {
+   foundItem = item;
+}
+
+  }
+  // take new values and change them so the item has the new values
+}
 
 // display low inventory items
 
